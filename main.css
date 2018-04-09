@@ -64,6 +64,10 @@ footer {
   padding: 25px;
 }
 
+.active-nav{
+  background-color: #e4e2e2;
+}
+
 #carouseldiv{
   padding-top: 30px;
   background-color: #d4d4d4;

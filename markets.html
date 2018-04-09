@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="markets.css">
+  <!-- Icons -->
+  <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  <title>markets</title>
+</head>
+
+<body>
+  <!-- create navbar -->
+  <nav class="navbar navbar-expand-sm bg-light nav-main">
+    <a class="navbar-brand" href="index.html">Block Manage</a>
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item active-nav">
+        <a class="nav-link" href="markets.html">Market</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="dummyPage.html">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact_us.html">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="dummyPage.html">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Error message incase of failed ajax call -->
+  <div class="container">
+    <h1 id="error"></h1>
+    <p id="error_message"></p>
+  </div>
+  <div class="container">
+    <h1>Market Data</h1>
+    <p>
+      Bellow is an input box that will auto complete input data. Please enter
+      an ticker symbol (BTC, ETH, etc..) or a coin name. Current market data will be pulled
+      and displayed bellow.
+    </p>
+  </div>
+  <div class="container">
+    <div class="ui-widget">
+      <div id="input-box">
+        <input type="text" id="tags" name="">
+        <button id="getData" class="btn btn-success">Get coin data</button>
+      </div>
+      <p id="input_error"></p>
+    </div>
+  </div>
+  <div id="coins" class="container">
+    <div id="coinRow" class="row">
+      <!-- populate with coin data -->
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="markets.js" type="text/javascript"></script>
+  <script src="displayData.js" type="text/javascript"></script>
+
+</body>
+
+</html>
