@@ -1,9 +1,10 @@
 var displayed = [];
 var displayed_objects = [];
-
-function returnId(id){
-  return id.replace(" ","").trim(); // quick and ugly hack
-}
+// extend strin in order to remove all spaces
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
 
 // this shows smaller decimal prices if the prices are less than .01
 function fixPrice(price) {
@@ -71,7 +72,7 @@ $("#getData").click(function(event) {
 
       var htmlContainer = $("<div></div>", {
         class: "coinData col-sm-4",
-        id: returnId(name),
+        id: name.replaceAll(' ', ''),
       });
 
       var htmlRemove = $('<button/>', {
@@ -80,7 +81,7 @@ $("#getData").click(function(event) {
         name: name,
         // remove this item from the DOM
         click: function(event) {
-          $("#" + returnId(name)).remove();
+          $("#" + name.replaceAll(' ', '')).remove();
           var index = displayed.indexOf(name); // <-- Not supported in <IE9
           if (index !== -1) {
             displayed.splice(index, 1);
