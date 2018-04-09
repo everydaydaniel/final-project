@@ -2,7 +2,7 @@ var displayed = [];
 var displayed_objects = [];
 
 function returnId(id){
-  return id.replace(" ","").trim(); // quick and ugly hack 
+  return id.replace(" ","").trim(); // quick and ugly hack
 }
 
 // this shows smaller decimal prices if the prices are less than .01
@@ -97,7 +97,7 @@ $("#getData").click(function(event) {
       $(htmlContainer).appendTo("#coinRow");
     } else {
       $("#input_error").html(
-        "Coin is already displayed"
+        coin + " is already displayed"
       );
     }
   } else {

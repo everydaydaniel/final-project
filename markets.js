@@ -18,7 +18,7 @@ $(document).ready(function() {
       combined_data = coin_names.concat(coin_symbols);
       $( "#tags" ).autocomplete({
             source: combined_data,
-            delay: 500
+            delay: 300
           });
     })
     .fail(function() {
